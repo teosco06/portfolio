@@ -1,0 +1,142 @@
+body {
+    background-color: #000;
+    color: #f0f0f0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.projects-container {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(163, 201, 230, 0.1);
+    border-radius: 30px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    scroll-margin-top: 110px;
+}
+
+.project-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 30px rgba(163, 201, 230, 0.05);
+}
+
+.project-content {
+    display: flex;
+    min-height: 550px;
+}
+
+.project-card:nth-child(even) .project-content {
+    flex-direction: row-reverse;
+}
+
+.project-info {
+    flex: 4;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info h2 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-section p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+/* Image Massive (60% de la largeur) */
+.project-massive-image {
+    flex: 6;
+    background: #111;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-massive-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    transition: 0.6s ease;
+}
+
+.project-card:first-child .project-massive-image img {
+    object-position: center; 
+}
+
+.project-card:hover .project-massive-image img {
+    transform: scale(1.05);
+}
+
+.comp-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.comp-tag {
+    background: rgba(255, 204, 255, 0.08);
+    color: var(--accent-color);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-left: 3px solid var(--accent-color);
+    line-height: 1.3;
+}
+
+.tech-stack {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    background: rgba(163, 201, 230, 0.1);
+    color: var(--secondary-color);
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid rgba(163, 201, 230, 0.3);
+}
+
+.soft-skills {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-style:oblique;
+    text-transform:uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.soft-skills span {
+    margin-right: 15px;
+}

@@ -1,0 +1,173 @@
+/*----------------COULEURS----------------*/
+:root {
+  /* Couleur du texte */
+  --color-text: rgb(163, 201, 230);
+
+  /* Couleur hover */
+  --color-text-main: rgb(255, 204, 255);
+  --bg-header: rgba(5, 10, 20, 0.9);
+  --accent-color: #ffccff; /* Ton rose */
+  --secondary-color: #a3c9e6; /* Ton bleu */
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --accent-color: #ffccff;
+  --secondary-color: #a3c9e6;
+  --card-bg: rgba(255, 255, 255, 0.03);
+}
+
+* {
+  font-family: 'Segoe UI', sans-serif;
+  
+}
+
+body {
+  margin: 0px;
+  background-color: black;
+  color: var(--color-text);
+}
+
+/*================= HEADER ===================*/
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 90px; /* Header plus haut pour s'imposer */
+  background: var(--bg-header);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* --- GAUCHE : Logo stylisé --- */
+.header-left {
+  flex: 1;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #fff;
+}
+
+.logo span {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* --- MILIEU : Navigation "Flottante" --- */
+header nav {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding: 8px 15px;
+  border-radius: 40px;
+  gap: 10px;
+}
+
+header nav ul li{
+  list-style: none;
+}
+
+header nav ul li a {
+  padding: 10px 25px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+  background: var(--accent-color);
+  color: #000;
+  box-shadow: 0 5px 15px rgba(255, 204, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* --- DROITE : Boutons et Réseaux --- */
+.header-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.btn-contact {
+  padding: 12px 28px;
+  background: linear-gradient(45deg, #a3c9e6, #ffccff);
+  color: #000 ;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.btn-contact:hover {
+  box-shadow: 0 0 25px rgba(163, 201, 230, 0.5);
+  filter: brightness(1.1);
+}
+
+/*================= FOOTER ===================*/
+
+footer {
+  display: flex;
+  background-color: rgb(78, 76, 76);
+  justify-content: center;
+  padding: 20px 0px;
+  p:last-child {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* 1. On transforme le body en conteneur Flex vertical */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Force le body à faire au moins toute la hauteur de l'écran */
+}
+
+/* 2. On dit au contenu principal de "pousser" le footer vers le bas */
+main {
+    flex: 1; /* Il va prendre tout l'espace disponible entre le header et le footer */
+}
+
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #050509; /* Fond espace */
+}
